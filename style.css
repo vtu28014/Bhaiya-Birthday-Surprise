@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #ffd6e8, #ead7ff, #fff0f7);
+    color: #5a3150;
+}
+
+/* =========================
+   COMMON PAGE
+========================= */
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.page.active {
+    display: flex;
+    animation: pageIn 1s ease;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatHeart 8s linear infinite;
+    opacity: 0.7;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 95%;
+    animation-delay: 5s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   WELCOME PAGE
+========================= */
+
+#welcome {
+    background:
+        radial-gradient(circle at 20% 20%, #ffffffaa, transparent 30%),
+        radial-gradient(circle at 80% 80%, #f5c6e5aa, transparent 30%),
+        linear-gradient(135deg, #ffd7ea, #e5d3ff);
+}
+
+.welcome-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(150, 80, 130, 0.18);
+}
+
+.gift {
+    font-size: 100px;
+    animation: giftBounce 2s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes giftBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(5deg);
+    }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: #b73579;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7b4168;
+    margin-bottom: 12px;
+}
+
+.welcome-box p {
+    margin: 10px 0;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.welcome-box button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff5fa2, #c45be8);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 10px 25px rgba(200, 80, 160, 0.3);
+}
+
+.welcome-box button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 15px 30px rgba(200, 80, 160, 0.4);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    position: relative;
+    z-index: 2;
+    width: min(600px, 95%);
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(130, 70, 120, 0.18);
+}
+
+.card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #b73579;
+    margin-bottom: 15px;
+}
+
+.emoji {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.big-question {
+    font-size: 1.2rem;
+    margin: 20px 0 30px;
+    font-weight: 500;
+}
+
+/* =========================
+   YES / NO BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.yes-btn,
+.no-btn {
+    padding: 13px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.yes-btn {
+    background: #ff5fa2;
+    color: white;
+}
+
+.no-btn {
+    background: white;
+    color: #a64b7c;
+    border: 2px solid #f2a6ca;
+}
+
+.yes-btn:hover {
+    transform: scale(1.08);
+}
+
+.no-btn:hover {
+    transform: scale(0.95);
+}
+
+#no-message {
+    margin-top: 25px;
+    min-height: 30px;
+    font-weight: 600;
+    color: #b73579;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+#question-number {
+    font-size: 0.9rem;
+    color: #9a6484;
+    margin-bottom: 15px;
+}
+
+#question {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.7rem;
+    color: #b73579;
+    margin-bottom: 25px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-btn {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #6d3b5c;
+    border: 2px solid #f2b9d5;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+.answer-btn:hover {
+    background: #ffd6e8;
+    transform: translateY(-2px);
+}
+
+#quiz-message {
+    min-height: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.big-gift {
+    font-size: 150px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    animation: giftShake 1.5s infinite;
+    transition: 0.3s;
+}
+
+.big-gift:hover {
+    transform: scale(1.1);
+}
+
+@keyframes giftShake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-8deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+}
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+#final {
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.final-container {
+    position: relative;
+    z-index: 2;
+    width: min(950px, 95%);
+    text-align: center;
+}
+
+.final-container h1 {
+    margin-bottom: 10px;
+}
+
+.beautiful {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #8d426f;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px 0 50px;
+}
+
+.photos img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(100, 50, 90, 0.2);
+    transition: 0.4s ease;
+}
+
+.photos img:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+.photos img:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.photos img:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.photos img:hover {
+    transform: rotate(0) scale(1.08);
+    z-index: 5;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(15px);
+    padding: 45px;
+    border-radius: 35px;
+    text-align: left;
+    box-shadow: 0 20px 60px rgba(120, 60, 110, 0.15);
+}
+
+.letter h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #b73579;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    line-height: 1.9;
+    font-size: 1rem;
+    margin: 18px 0;
+    color: #5c4052;
+}
+
+.highlight {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem !important;
+    color: #b73579 !important;
+    font-weight: 600;
+}
+
+.love {
+    text-align: center;
+    font-size: 1.3rem !important;
+    font-weight: 600;
+    color: #b73579 !important;
+}
+
+.signature {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 20px 12px;
+    }
+
+    .welcome-box {
+        padding: 35px 20px;
+    }
+
+    .gift {
+        font-size: 75px;
+    }
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    .card h2 {
+        font-size: 2.4rem;
+    }
+
+    #question {
+        font-size: 2.2rem;
+    }
+
+    .big-gift {
+        font-size: 110px;
+    }
+
+    .photos img {
+        width: 85%;
+        max-width: 280px;
+    }
+
+    .letter {
+        padding: 25px 20px;
+    }
+
+    .letter h2 {
+        font-size: 2.4rem;
+    }
+
+    .letter p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .highlight {
+        font-size: 1.7rem !important;
+    }
+}
