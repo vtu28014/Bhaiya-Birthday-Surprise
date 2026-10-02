@@ -11,35 +11,34 @@
 
 <body>
 
-    <!-- Floating decorations -->
+    <!-- Floating Hearts -->
     <div class="hearts">
         <span>💗</span>
-        <span>✨</span>
-        <span>🌸</span>
+        <span>💕</span>
         <span>💖</span>
+        <span>💗</span>
         <span>✨</span>
         <span>💕</span>
     </div>
 
-    <!-- STARTING PAGE -->
+
+    <!-- ================= WELCOME PAGE ================= -->
+
     <section id="welcome" class="page active">
 
-        <div class="welcome-box">
+        <div class="card welcome-card">
 
-            <div class="gift">🎁</div>
+            <div class="gift-icon">🎁</div>
 
             <h1>Heyyy Bhaiyaaa 💗</h1>
 
-            <p class="subtitle">
-                Yes, beautiful gurllll... I'm talking to YOU 👀
+            <p>
+                Yes, beautiful gurllll... I'm talking to <b>YOU</b> 👀
             </p>
 
             <p>
                 I made something very special for you...
-            </p>
-
-            <p class="small-text">
-                But you have to enter first. 😌✨
+                because you deserve a little birthday surprise. 🥹💗
             </p>
 
             <button onclick="startSurprise()">
@@ -51,27 +50,27 @@
     </section>
 
 
-    <!-- QUESTION PAGE -->
+
+    <!-- ================= GIFT QUESTION ================= -->
+
     <section id="gift-question" class="page">
 
         <div class="card">
 
-            <div class="emoji">🎁</div>
-
-            <h2>Okay Bhaiya... 👀</h2>
+            <h1>Okay Bhaiya... 👀</h1>
 
             <p class="big-question">
-                Do you think you deserve a birthday gift?
+                Do you think you deserve a birthday gift? 🎁
             </p>
 
-            <div class="buttons">
+            <div class="button-container">
 
-                <button class="yes-btn" onclick="chooseYes()">
+                <button onclick="chooseYes()">
                     YESSS 💗
                 </button>
 
-                <button class="no-btn" onclick="chooseNo()">
-                    NO 😌
+                <button onclick="chooseNo()" class="no-button">
+                    NO 😭
                 </button>
 
             </div>
@@ -83,10 +82,12 @@
     </section>
 
 
-    <!-- QUESTIONS PAGE -->
+
+    <!-- ================= QUIZ PAGE ================= -->
+
     <section id="quiz" class="page">
 
-        <div class="card">
+        <div class="card quiz-card">
 
             <p id="question-number"></p>
 
@@ -101,23 +102,33 @@
     </section>
 
 
-    <!-- GIFT PAGE -->
+
+    <!-- ================= GIFT PAGE ================= -->
+
     <section id="gift" class="page">
 
         <div class="card">
 
-            <h2>You actually made it... 🥹💗</h2>
+            <h1>YOU DID ITTT! 🎉</h1>
 
             <p>
-                I guess you finally deserve your gift.
+                Okay okayyy... you officially earned your gift. 😌💗
             </p>
 
-            <div class="big-gift" onclick="openGift()">
+            <p>
+                Now open it carefully... 👀
+            </p>
+
+            <div
+                class="big-gift"
+                onclick="openGift()"
+                title="Click me!"
+            >
                 🎁
             </div>
 
             <p>
-                <b>Click the gift 👆</b>
+                Click the gift! 💌
             </p>
 
         </div>
@@ -125,166 +136,139 @@
     </section>
 
 
-    <!-- FINAL PAGE -->
+
+    <!-- ================= FINAL PAGE ================= -->
+
     <section id="final" class="page">
 
         <div class="final-container">
 
             <h1>Happy Birthday, Bhaiya! 🎂💗</h1>
 
-            <p class="beautiful">
-                To my beautiful gurllll...
+            <p class="subtitle">
+                To my beautiful gurllll... 🥹💕
             </p>
 
-            <!-- PHOTOS -->
-            <div class="photos">
 
-                <img src="photos/photo1.jpg" alt="Bhaiya Photo 1">
+            <!-- ================= PHOTOS ================= -->
 
-                <img src="photos/photo2.jpg" alt="Bhaiya Photo 2">
+            <div class="photo-gallery">
 
-                <img src="photos/photo3.jpg" alt="Bhaiya Photo 3">
+                <div class="photo-card">
+                    <img
+                        src="photo1.jpg"
+                        alt="Beautiful memory 1"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="photo2.jpg"
+                        alt="Beautiful memory 2"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="photo3.jpg"
+                        alt="Beautiful memory 3"
+                    >
+                </div>
 
             </div>
 
 
-            <!-- LETTER -->
+            <!-- ================= LETTER ================= -->
+
             <div class="letter">
 
-                <h2>To My Beautiful Gurllll... 💗</h2>
-
                 <p>
-                    Bhaiya... Bidda... where do I even start?
+                    Happy Birthday to the bestest person I have ever met. 💗
                 </p>
 
                 <p>
-                    It has already been almost <b>3 years</b> since we met.
-                    And honestly, when I think about it, it's crazy that two
-                    roommates somehow became such an important part of each
-                    other's lives.
+                    It's crazy to think that we've known each other for
+                    almost three years now. From becoming roommates to
+                    becoming such an important part of each other's lives,
+                    I honestly wouldn't change a thing.
                 </p>
 
                 <p>
-                    One of the things I love the most about you is the way
-                    you are just <b>YOU</b>.
-                    You never have to pretend to be someone else.
-                    You're cute, beautiful, funny, cheerful, and sometimes
-                    completely impossible. 😭
+                    I love the way you are yourself. You are such a cute,
+                    beautiful and funny person, and your cheerful nature
+                    is honestly one of my favourite things about you.
                 </p>
 
                 <p>
-                    You call me <b>Nanna Garu</b>, irritate me to death,
-                    tease me, make fun of me, and somehow I never really
-                    complain about it.
+                    And let's talk about your habits... 😭😂
+                    The way you call me <b>"Nanna Garu"</b>,
+                    irritate me to death and then act like nothing happened
+                    is something else altogether. 😂
                 </p>
 
                 <p>
-                    Because somewhere inside, I truly love all of it. 💗
+                    But honestly, I never complain because somewhere
+                    inside I secretly love it. 🥹💗
                 </p>
 
                 <p>
-                    I love your funny side.
-                    I love the way you act sometimes.
-                    I even love the way you sleep so cutely. 😭💗
+                    Your funny behaviour, your childishness, and even the
+                    cute way you sleep... everything about you makes you,
+                    <b>YOU</b>.
                 </p>
 
                 <p>
-                    And our <b>late-night talks</b>...
-                    those are some of my favourite memories with you.
-                    The random conversations, the dirty-mind talks,
-                    the endless teasing, and especially you constantly
-                    reminding me that I'm still single. 🙄😂
+                    Some of my favourite memories will always be our
+                    late-night talks. 🌙
+                    The random conversations, the nonsense talks,
+                    the dirty-mind talks 😂, and all those moments where
+                    we could literally talk about anything.
                 </p>
 
                 <p>
-                    But behind all the fun and madness,
-                    I want you to know something seriously.
-                </p>
-
-                <p class="highlight">
-                    Thank you. 💗
+                    And obviously, I can never forget how you keep teasing
+                    me for being <b>SINGLE</b>. 😭😂
                 </p>
 
                 <p>
                     Thank you for always listening to me.
                     Thank you for being there.
                     Thank you for being such a beautiful part of my happiness.
-                    And thank you for simply being someone with whom
-                    I can be myself.
-                </p>
-
-                <p class="love">
-                    I truly, truly love you, Bhaiya. ❤️
                 </p>
 
                 <p>
-                    And on your birthday, there is one thing I really
-                    want you to promise me:
-                </p>
-
-                <p class="highlight">
-                    Please never ever kill your childish side. 🥹
+                    I really want you to know that I truly love you,
+                    and I'm genuinely grateful that life gave me a person
+                    like you. 💕
                 </p>
 
                 <p>
-                    Because honestly, that childish, crazy, funny side
-                    of you is one of the reasons we even became this close.
-                    That's the side of you that made so many memories with me,
-                    and I never want you to lose it while growing up.
+                    Please never and ever kill your childish side.
+                    Never lose that funny, crazy, cheerful version of you.
+                    Because only because of that childish and funny side,
+                    we met and became what we are today. 🥹💗
                 </p>
 
                 <p>
-                    Grow. Dream. Change.
-                    Become everything you want to become...
-                </p>
-
-                <p class="highlight">
-                    But please don't stop being YOU. 💗
+                    Always keep smiling.
+                    Always stay the beautiful person you are.
                 </p>
 
                 <p>
-                    I hope we both grow together.
+                    And I hope we both grow together,
+                    support each other through everything,
+                    and stay with each other through all the ups and downs
+                    of life...
+                    <b>till our last breath.</b> ❤️
                 </p>
 
-                <p>
-                    I hope we stay beside each other through all the
-                    ups and downs.
+                <p class="final-wish">
+                    Happy Birthday once again, Bhaiya. 🎂💗
+                    You will always be very special to me.
                 </p>
-
-                <p>
-                    I hope years from now, we'll still be irritating
-                    each other, laughing at stupid things, having our
-                    random late-night talks, and making fun of each other
-                    just like we do now.
-                </p>
-
-                <p class="love">
-                    And no matter how much life changes...
-                </p>
-
-                <p class="highlight">
-                    I hope we remain a part of each other's lives
-                    till our last breath. ❤️
-                </p>
-
-                <h2>
-                    Happy Birthday, Bhaiya! 🎂💗
-                </h2>
-
-                <p>
-                    Stay cute.<br>
-                    Stay crazy.<br>
-                    Stay childish.<br>
-                    Stay the beautiful gurllll you are.
-                </p>
-
-                <h2>
-                    KEEP SMILING. ALWAYS. ✨
-                </h2>
 
                 <p class="signature">
-                    With all my love,<br>
-                    <b>Your Nanna Garu 💗</b>
+                    Your Nanna Garu 💗
                 </p>
 
             </div>
